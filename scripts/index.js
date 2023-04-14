@@ -1,6 +1,6 @@
-import * as fp from "./principalFunctions.js";
+import * as principalFunctions from "./principalFunctions.js";
 
 window.onload = function(){
-    fp.start();
-    fp.principal();
+    principalFunctions.start();
+    principalFunctions.principal();
 }

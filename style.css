@@ -3,3 +3,62 @@
     border: 0px;
     padding: 0px;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#header{
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background: rgba(200, 200, 0, 1);
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgb(63, 39, 4),
+    inset 5px 5px 20px rgb(77, 11, 11);
+    border: 1px solid rgb(105, 93, 23);
+    z-index: 10;
+}
+
+#canvasDiv{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: green;
+    width: 100vw;
+    height: 100vh;
+}
+
+#cvs{
+    position: absolute;
+    top: 20vh;
+    width: 50vw;
+    height: 50vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px;
+
+}
+
+#footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 20vh;
+    background: orange;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 20px ;
+    border: 1px solid darkblue;
+    z-index: 10;
+}
+
+@media (width > 600px) {
+    #header{
+        width: 50vw;
+    }
+
+    #footer{
+        width: 50vw
+    }
+}

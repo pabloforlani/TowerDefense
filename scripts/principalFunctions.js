@@ -1,7 +1,12 @@
-import * as fs from "./secondaryFunctions.js";
+import * as secondaryFunctions from "./secondaryFunctions.js";
+import * as clases from "./clases.js";
+
+var cvs, ctx, model;
 
 export function start(){
-    console.log(fs.randomNumber(100));
+    model = new clases.Object(20,20,30,30,"red");
+    cvs = document.getElementById("cvs");
+    ctx = cvs.getContext("2d");
 }
 
 export function principal(){
@@ -13,13 +18,13 @@ export function principal(){
 }
 
 function update(){
-
+    model.move(100,50);
 }
 
 function draw(){
-
+    model.draw(ctx);
 }
 
 function clean(){
-
+    ctx.cleanRect
 }
