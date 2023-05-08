@@ -24,6 +24,13 @@ export class Object {
         if(this.x > ancho || this.x < 0){
             this.dx = - this.dx;
         }
+
+        if(this.y > alto || this.y < 0){
+            this.dy = - this.dy;
+        }
+
+        this.x += this.dx;
+        this.y += this.dy;
     }
 
 
