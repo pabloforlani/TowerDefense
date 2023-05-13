@@ -3,6 +3,9 @@ import * as clases from "./clases.js";
 
 var cvs, ctx, model;
 var wide, high;
+var background = new Image(wide,high);
+background.src = "./assets/background.jpg";
+background.crossOrigin = "*";
 
 export function start(){
     model = new clases.Object(20,20,30,30,"red");
@@ -11,6 +14,8 @@ export function start(){
 
     wide = cvs.width;
     high = cvs.height;
+
+    console.log(secondaryFunctions.distance(1,1,2,2))
 }
 
 export function principal(){
@@ -26,6 +31,7 @@ function update(){
 }
 
 function draw(){
+    ctx.drawImage(background,0,0, wide, high);
     model.draw(ctx);
 }
 

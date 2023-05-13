@@ -20,19 +20,27 @@ export class Object {
         context2D.restore();
     }
 
-    move = function(ancho, alto){
-        if(this.x > ancho || this.x < 0){
-            this.dx = - this.dx;
-        }
+    move = function(wide, high){
+        // if(this.x > wide || this.x < 0){
+        //     this.dx = - this.dx;
+        // }
 
-        if(this.y > alto || this.y < 0){
-            this.dy = - this.dy;
-        }
+        // if(this.y > high || this.y < 0){
+        //     this.dy = - this.dy;
+        // }
 
-        this.x += this.dx;
-        this.y += this.dy;
+        // this.x += this.dx;
+        // this.y += this.dy;
     }
 
 
+}
+
+export class Weapond {
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+        
+    }
 }
 
