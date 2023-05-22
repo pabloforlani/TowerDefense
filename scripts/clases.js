@@ -13,11 +13,11 @@ export class Object {
 
     }
 
-    draw = function(context2D){
-        context2D.save();
+    draw = function(context2D, x, y){
+        context2D.beginPath();
         context2D.fillStyle = this.color;
-        context2D.fillRect(this.x, this.y, this.wide, this.high);
-        context2D.restore();
+        context2D.fillRect(x, y, this.wide, this.high);
+        context2D.closePath();
     }
 
     move = function(wide, high){
@@ -37,10 +37,10 @@ export class Object {
 }
 
 export class Weapond {
-    constructor(x, y){
+    constructor(x, y, live){
         this.x = x;
         this.y = y;
-        
+        this.life = 0
     }
 }
 

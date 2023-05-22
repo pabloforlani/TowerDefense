@@ -1,64 +1,141 @@
-*{
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
+html{
+    background: rgb(0, 0, 0);    
 }
 
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/body.jpg");
+    background-size: contain;
+    background-color: rgb(15, 87, 24);
+    border-radius: 20px;
 }
 
-#header{
-    position: fixed;
-    width: 100vw;
+#advice{
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: darkblue;
+    color: aliceblue;
+    width: 100vh;
+    height: 100vh;
+    z-index: 99;
+}
+
+#divCanvas{
+    position: absolute;
+    background: rgb(160, 23, 23);
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px;
+    overflow: hidden;
+}
+
+#divHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
     height: 10vh;
     background: rgba(200, 200, 0, 1);
     border-radius: 20px;
     box-shadow: 5px 5px 30px rgb(63, 39, 4),
     inset 5px 5px 20px rgb(77, 11, 11);
-    border: 1px solid rgb(105, 93, 23);
     z-index: 10;
+    margin: auto;
+    margin-bottom: 3vh;
 }
 
-#canvasDiv{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background: green;
-    width: 100vw;
-    height: 100vh;
-}
+.info{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+} 
 
 #cvs{
     position: absolute;
-    top: 20vh;
-    width: 50vw;
-    height: 50vh;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 5px 5px 30px;
-
+    width: 100%;
+    height: 100%;
+    background: blue;
 }
 
-#footer{
-    position: fixed;
+#divFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    width: 100%;
+    height: 10vh;
     bottom: 0px;
-    width: 100vw;
-    height: 20vh;
     background: orange;
     border-radius: 20px;
     box-shadow: inset 5px 5px 20px ;
-    border: 1px solid darkblue;
     z-index: 10;
 }
 
-@media (width > 600px) {
-    #header{
-        width: 50vw;
-    }
+#divButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    left: 10%;
+    width: 50%;
+    height: 100%;
+}
 
-    #footer{
-        width: 50vw
-    }
+button{
+    margin: auto;
+    background: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 80%;
+    width: 20%;
+}
+
+button:hover{
+    border: 5px solid rgb(116, 22, 22);
+}
+
+button:focus{
+    background: rgb(116, 22, 22);;
+}
+
+#menu{
+    position: absolute;
+    right: 10%;
+}
+
+@media (height < 500px) {
+
+.info{
+    padding: 0px;
+}
+    
 }
